@@ -97,6 +97,9 @@ class Program
             //calculate and display winner
             GetWinner(p1.Score, Dealer.Score);
 
+            if (p1.Score > Dealer.Score && p1.Score <= 21 || Dealer.Score > 21 && p1.Score < 21)
+                RockPaperScissors();
+
             Console.WriteLine("\n--- GAME OVER ---");
             Console.Write("Do you want to play again: y/n ? >> ");
             playerChoice = Console.ReadLine();
@@ -120,9 +123,62 @@ class Program
 
         else if (p1Score == dealerScore && p1Score <= 21 && dealerScore <= 21)
             Console.WriteLine("\nIts a draw!!!");
+
+        else if (dealerScore > 21 && p1Score < 21)
+            Console.WriteLine("\nPlayer 1 Wins!!!");
     }
 
 
+    //BONUS GAME - Rock, Paper Scissors Game
+    //this method uses the same logic as the DealCard() method...
+    //...by inputting a random number into an array index
+    public static void RockPaperScissors()
+    {
+        int i;
+        string playerChoice = "";
+
+        string[] choices = new string[] { "rock", "paper", "scissors" };
+
+        Random rng = new Random();
+
+        //game is in a do while loop incase a draw happens
+        do
+        {
+
+            i = rng.Next(0, 3);
+
+            Console.Write("\nEnter your choice: rock, paper or scissors >> ");
+            playerChoice = Console.ReadLine();
+
+            Console.WriteLine("Computer throws {0}", choices[i]);
+
+            //the following logic controls the games outcome
+            if (choices[i] == "rock" && playerChoice == "scissors")
+                Console.WriteLine("\nYou Lose!!");
+
+            else if (playerChoice == "rock" && choices[i] == "scissors")
+                Console.WriteLine("\nCongratulations!! You have won 1 million euros!! To collect your prize, head to ATU Sligo and ask for Keith");
+
+            else if (choices[i] == "paper" && playerChoice == "rock")
+                Console.WriteLine("\nYou Lose!!");
+
+            else if (playerChoice == "paper" && choices[i] == "rock")
+                Console.WriteLine("\nCongratulations!! You have won 1 million euros!! To collect your prize, head to ATU Sligo and ask for Keith");
+
+            else if (choices[i] == "scissors" && playerChoice == "paper")
+                Console.WriteLine("\nYou Lose!!");
+
+            else if (playerChoice == "scissors" && choices[i] == "paper")
+                Console.WriteLine("\nCongratulations!! You have won 1 million euros!! To collect your prize, head to ATU Sligo and ask for Keith");
+
+            else if (playerChoice == choices[i])
+                Console.WriteLine("\nIts a draw -- Play again...");
+
+            else Console.WriteLine("\nIncorrect Choice");
+
+        } while (choices[i] == playerChoice); //repeats game if a draw occurs
+
+    }
 
 }
 
