@@ -115,7 +115,7 @@ class Program
     //method to calculate and display winner
     public static void GetWinner(int p1Score, int dealerScore)
     {
-        if (p1Score > dealerScore && p1Score <= 21)
+        if (p1Score > dealerScore && p1Score <= 21 || dealerScore > 21 && p1Score < 21)
             Console.WriteLine("\nPlayer 1 Wins!!!");
 
         else if (dealerScore > p1Score && dealerScore <= 21)
@@ -123,9 +123,6 @@ class Program
 
         else if (p1Score == dealerScore && p1Score <= 21 && dealerScore <= 21)
             Console.WriteLine("\nIts a draw!!!");
-
-        else if (dealerScore > 21 && p1Score < 21)
-            Console.WriteLine("\nPlayer 1 Wins!!!");
     }
 
 
@@ -140,6 +137,9 @@ class Program
         string[] choices = new string[] { "rock", "paper", "scissors" };
 
         Random rng = new Random();
+
+        Console.WriteLine("\n*** BONUS GAME ***"
+            + "/nBeat the computer to win a special prize...");
 
         //game is in a do while loop incase a draw happens
         do

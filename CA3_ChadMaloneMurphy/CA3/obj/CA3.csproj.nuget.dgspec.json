@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/Chad/ATU/OOSD1/CA3/BlackJack_CA3/CA3/CA3/CA3.csproj": {}
+    "/Users/Chad/ATU/OOSD1/CA3/BlackJack_CA3/CA3_ChadMaloneMurphy/CA3/CA3.csproj": {}
   },
   "projects": {
-    "/Users/Chad/ATU/OOSD1/CA3/BlackJack_CA3/CA3/CA3/CA3.csproj": {
+    "/Users/Chad/ATU/OOSD1/CA3/BlackJack_CA3/CA3_ChadMaloneMurphy/CA3/CA3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Chad/ATU/OOSD1/CA3/BlackJack_CA3/CA3/CA3/CA3.csproj",
+        "projectUniqueName": "/Users/Chad/ATU/OOSD1/CA3/BlackJack_CA3/CA3_ChadMaloneMurphy/CA3/CA3.csproj",
         "projectName": "CA3",
-        "projectPath": "/Users/Chad/ATU/OOSD1/CA3/BlackJack_CA3/CA3/CA3/CA3.csproj",
+        "projectPath": "/Users/Chad/ATU/OOSD1/CA3/BlackJack_CA3/CA3_ChadMaloneMurphy/CA3/CA3.csproj",
         "packagesPath": "/Users/Chad/.nuget/packages/",
-        "outputPath": "/Users/Chad/ATU/OOSD1/CA3/BlackJack_CA3/CA3/CA3/obj/",
+        "outputPath": "/Users/Chad/ATU/OOSD1/CA3/BlackJack_CA3/CA3_ChadMaloneMurphy/CA3/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/Chad/.nuget/NuGet/NuGet.Config"
